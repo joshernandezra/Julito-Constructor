@@ -1,0 +1,189 @@
+@charset "utf-8";
+
+/*Añado fuentes externas para que puedan ser visualizadas en la pagina web*/
+@font-face {
+    font-family: Natural;
+    src: url(fonts/Natural.ttf);
+}
+@font-face {
+    font-family: Open;
+    src: url(fonts/Open.ttf);
+}
+@font-face {
+    font-family: Poppins;
+    src: url(fonts/Poppins.ttf);
+}
+
+/*Eliminamos los margenes y paddings que agrega el navegador por defecto*/
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* Se determinan las propiedades del fondo de la pagina, como lo son la imagen, el tamaño, la posicion, entre otras. */
+body {
+	background-image: url(img/bogotan2.jpg);
+	background-repeat:no-repeat;
+	background-position: center;
+	background-attachment:fixed;
+	background-size: cover
+	background-color: lightgreen;
+}
+
+/* Esta sera la caja que contendra el contenido principal de la pagina */
+div.contenido {
+	width: 800px;
+	height: 600px;
+	background-color: white;
+	font-family: poppins;
+	font-size: 14px;
+	padding: 25px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.7);
+	position: fixed;
+	left: 400px;
+	top: 20px;
+	margin-bottom: 30px;
+	overflow: auto;
+  	float: center;
+}
+
+
+/* Las siguientes configuraciones son referidas al menu*/
+
+/*En primer lugar se coloca la caja que contendra el logo y los apartados del menu*/
+div.menu {
+	width: 320px;
+	height: auto;
+	background-color: white;
+	font-family: poppins;
+	font-size: 14px;
+	top: 20px;
+	left: 20px;
+	padding-bottom: 10px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.45);
+	position: fixed;
+  	float: left;
+	z-index: -2;
+}
+
+
+#imagenfondo
+	{
+		float: right;
+		position: fixed;
+		padding-top: 450px;
+		width: 120%;
+		opacity: 0.7;
+		z-index: -1;
+	}
+/*Ahora continuare con la configuracion del menu, formato que fue tomado de la pagina http://codepen.io/ y luego fue modificado para adaptarlo 
+a la apariencia de la pagina web, con la fuente y la paleta de colores.*/
+
+#nav {
+  width : 270px;
+  padding-top: 120px;
+  padding-left: 28px;
+}
+
+
+/*Ahora realizare una pequeña caja para los creditos y el acceso al mapa del sitio*/
+
+div.creditos { 
+  width: 270px;
+  height: auto;
+  top: 520px;
+  left: 50px;
+  position: absolute;
+  float: left;
+  position: fixed;
+  padding: 0 25px;
+}
+
+/*Estilo del texto que ira en los creditos*/
+
+p#tcreditos {
+  font-family: open, arial, helvetica, sans-serif;
+  font-size: 14px;
+  color: black;
+  text-align:center;
+
+}
+
+a#lcreditos {
+  color: rgb(102,153,102);
+  font-size: 14px;
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+
+
+ /*=====================================================DISEÑO ADAPTATIVO==============================================================*/
+
+ @media only screen and (max-width: 850px){
+ 
+ /* Configuracion de los contenidos comunes a todos los apartados. */
+  div.menu { position: relative;
+    width: 60%;
+    left: 20%;
+    margin-bottom: 5%;
+  }
+
+  nav {
+    width: 100%
+  }
+
+   div.creditos {position: relative;
+    margin-top: 5%;
+    top: 0;
+    max-width: 80%;
+    margin-bottom: 5%;
+  } 
+
+
+
+  div.contenido {
+    position: relative;
+    left: 0.8%;
+    max-width: 85%;
+    overflow: hidden;
+    height: auto;
+  }
+ 
+  p {
+    max-width: 100%
+  }
+
+
+@media only screen and (max-width: 480px){
+ 
+ /* Configuracion de los contenidos comunes a todos los apartados. */
+  div.menu { position: relative;
+    width: 97.7%;
+    left: 0.8%;
+    margin-bottom: 5%;
+  }
+
+  nav {
+    width: 100%
+  }
+
+   div.creditos {position: relative;
+    margin-top: 5%;
+    top: 0;
+    max-width: 80%;
+    margin-bottom: 5%;
+  } 
+
+  
+  div.contenido {
+    position: relative;
+    left: 0.8%;
+    max-width: 85%;
+    overflow: hidden;
+    height: auto;
+  }
+ 
+  p {
+    max-width: 100%
+  }
